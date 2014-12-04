@@ -1,0 +1,24 @@
+{# tutorial/templates/people.html #}
+{% load render_table from django_tables2 %}
+<!doctype html>
+
+<TITLE>Rockstand</TITLE>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" />
+    </head>
+    <body>
+    <div style="float:right;">
+        <form action="/EventTracker/Logout/">
+            <input type="submit"  value="Logout" style="padding:3px 10px; font-size:8px;" name="Logout">
+         </form>
+    </div>
+
+    <div style="float:left;">
+        {% render_table table %}
+     </div>
+
+    <div style="clear:both"></div>
+    </body>
+</html>

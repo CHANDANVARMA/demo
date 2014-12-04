@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Event Tracking MIS</title>
+<style>
+    .tbl {
+     border:0px solid #ccc;
+    }
+    .tbl tr {
+     background-color:#cbcbcb;
+    }
+    .tbl th {
+     background-color:rgba(140, 141, 228, 1);
+    }
+
+</style>
+
+</head>
+
+<body class="container">
+        <h5>Today {% now "D d M Y" %}</h5>
+<div class="row">
+    <div class="span4">
+        <h3>RockStand Event Tracking MIS</h3>
+        <div style="float:left;margin-right:200px;">
+            <table class="tbl" cellpadding="1" cellspacing="1">
+            <tr>
+            <th>Event Name</th>
+
+            <th>Category Name</th>
+
+                <th>User Count</th>
+            </tr>
+            {% for data in result %}
+
+            <tr>
+
+                <td>{{data.clicked_on|upper}}</td>
+                <td>{{data.category_name}}</td>
+                <td>{{data.count }}</td>
+
+
+            </tr>
+            {% endfor %}
+
+            </table>
+
+</div>
+</div>
+</div>
+</body>
+</html>
