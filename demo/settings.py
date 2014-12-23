@@ -22,14 +22,35 @@ SECRET_KEY = 'by9owr^l14$3%hdoz=$turl4gk!9_w6#60gaohtk5=!8uf&tm('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+USE_SEARCH_ENGINE = True
+
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+#TEMPLATE_LOADERS = (
+#    'django.template.loaders.filesystem.Loader',
+#    'django.template.loaders.app_directories.Loader',
+    #'django.template.loaders.eggs.Loader',
+#)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.request",
+    "django.contrib.auth.context_processors.auth",
+    #"django.core.context_processors.debug",
+    #"django.core.context_processors.i18n",
+    #"django.core.context_processors.media",
+    #"django.core.context_processors.static",
+    #"django.contrib.messages.context_processors.messages",
+    #"zinnia.context_processors.version",
+)
 
 
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,6 +101,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+BOOKTYPESPICE = (
+    (0, ''),
+    (1, 'Book'),
+    (2, 'Magazine'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/

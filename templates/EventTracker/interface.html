@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Event Tracking MIS</title>
+<title>KiwiTech Web Tracking MIS</title>
 <style>
     .tbl {
      border:0px solid #ccc;
@@ -19,8 +19,17 @@
 <body class="container">
         <h5>Today {% now "D d M Y" %}</h5>
 <div class="row">
+
     <div class="span4">
-        <h3>RockStand Event Tracking MIS</h3>
+
+        <h3>KiwiTech Web Event Tracking MIS</h3>
+
+        <div style="float:right;">
+
+            <form action="/logout/"><!--For Logout Button -->
+            <input type="submit"  value="Logout" style="padding:3px 10px; font-size:8px;" name="Logout">
+            </form>
+        </div>
         <div style="float:left;margin-right:200px;">
             <table class="tbl" cellpadding="1" cellspacing="1">
             <tr>
@@ -44,8 +53,15 @@
 
             </table>
 
-</div>
-</div>
+        </div>
+    </div>
+
+        <!--for Search button -->
+
+        <div class="wrapper">
+        <input type="text" />
+        <button>Search</button>
+        </div>
 </div>
 </body>
 </html>
